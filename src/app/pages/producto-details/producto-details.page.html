@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-list lines="full">
+    <ion-item *ngIf="producto">
+      <ion-item>
+        <ion-label>Producto</ion-label>
+        <ion-select cancelText="Nah" okText="Okay!" [(ngModel)]="producto.nombre">
+          <ion-select-option value="Galletas" [(ngModel)]="producto.precio">Galletas $12</ion-select-option>
+          <ion-select-option value="Mamut ">Mamut $8</ion-select-option>
+          <ion-select-option value= "Chicharron">Chicharron $10</ion-select-option>
+          <ion-select-option value= "Mati">Mati $12</ion-select-option>
+          <ion-select-option value="Te">Te $10</ion-select-option>
+          <ion-select-option value="Agua sede">Agua sede $8</ion-select-option>
+          <ion-select-option value="Sabritas">Sabritas $12</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item *ngIf="producto">
+      <ion-item>
+        <ion-label>Precio</ion-label>
+        <ion-select cancelText="Nah" okText="Okay!" [(ngModel)]="producto.precio">
+          <ion-select-option type="number" value=8>8</ion-select-option>
+          <ion-select-option type="number" value=10>10</ion-select-option>
+          <ion-select-option type="number" value=12>12</ion-select-option>
+        </ion-select>
+      </ion-item>
+      </ion-item>
+    </ion-item>
+    <ion-item *ngIf="producto">
+      <ion-input required type="number" placeholder="Cantidad Vendida" [(ngModel)]="producto.cantidad"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="producto">
+      <ion-input required type="string" placeholder="Nombre del voluntario que compró" [(ngModel)]="producto.voluntario"></ion-input>
+    </ion-item>
+    <ion-label type="number">{{"$"+producto.precio*producto.cantidad}}</ion-label>
+  </ion-list>
+  <ion-button expand="full" (click)="saveProducto()">Guardar</ion-button>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" color="danger">
+    <ion-fab-button color="danger" (click)="onRemoveProducto(productoId)" routerLink="/" routerDirection="forward">
+      <ion-icon name="trash"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

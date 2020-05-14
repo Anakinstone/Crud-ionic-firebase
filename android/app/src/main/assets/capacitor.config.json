@@ -1,0 +1,6 @@
+{
+  "appId": "org.compartiendosonrisas.ionictienda",
+  "appName": "Tiendita Cs",
+  "bundledWebRuntime": false,
+  "webDir": "www"
+}

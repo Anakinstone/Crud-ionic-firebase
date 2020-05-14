@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Tiendita Cs</string>
+    <string name="title_activity_main">Tiendita Cs</string>
+    <string name="package_name">org.compartiendosonrisas.ionictienda</string>
+    <string name="fileprovider_authority">org.compartiendosonrisas.ionictienda.fileprovider</string>
+    <string name="custom_url_scheme">org.compartiendosonrisas.ionictienda</string>
+</resources>
